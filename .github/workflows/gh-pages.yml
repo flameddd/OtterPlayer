@@ -29,10 +29,9 @@ jobs:
     - run: npm run build
 
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        ACCESS_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         BASE_BRANCH: master # The branch the action should deploy from.
-        PUBLISH_BRANCH: gh-pages # The branch the action should deploy to.
-        PUBLISH_DIR: .
-        FOLDER: build # The folder the action should deploy.:  
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build # The folder the action should deploy.:
