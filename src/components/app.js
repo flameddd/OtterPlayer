@@ -30,7 +30,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<div id="app">
-        <Header name={name} onInput={this.onInput} />
+        <Header name={this.state.name} onInput={this.onInput} />
 				<Router onChange={this.handleRoute}>
 					<Home path="/" {...this.state} />
 					<Profile path="/profile/" user="me" />
