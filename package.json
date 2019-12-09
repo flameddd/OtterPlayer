@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "localvideoviewer",
+  "name": "LocalVideoPlayer",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -35,7 +35,8 @@
   "dependencies": {
     "preact": "^10.0.1",
     "preact-render-to-string": "^5.1.0",
-    "preact-router": "^3.0.0"
+    "preact-router": "^3.0.0",
+    "video.js": "^7.6.6"
   },
   "jest": {
     "preset": "jest-preset-preact",
