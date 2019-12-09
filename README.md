@@ -1,12 +1,15 @@
-# LocalVideoPlayer
+# OtterPlayer
 
 An video player base on browser
 - As a MacBook user, You can zoom in video
 
+### 20191209
+- add `videojs`
+
 ## todos
 - minize js bundler
   - choose `preactjs`
-- add `videojs`
+- ~~add `videojs`~~
 - hide appBar when playing video
   - maybe need A state when playing, update state, pass into appBar
   - how to add `state` in `preactjs` ?

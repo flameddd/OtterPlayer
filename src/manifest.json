@@ -1,6 +1,6 @@
 {
-  "name": "LocalVideoPlayer",
-  "short_name": "WLVP",
+  "name": "OtterPlayer",
+  "short_name": "OtterPlayer",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",

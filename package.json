@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "LocalVideoPlayer",
+  "name": "OtterPlayer",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
