@@ -8,7 +8,7 @@
     "start:production": "npm run -s serve",
     "start:development": "npm run -s dev",
     "build": "preact build",
-    "build:gh": "GITHUB_PAGES=OtterPlayer preact build",
+    "build:gh": "GITHUB_PAGES=OtterPlayer preact build && dot-json ./build/manifest.json start_url \"/OtterPlayer/\"",
     "serve": "preact build && serve build --single",
     "dev": "preact watch",
     "lint": "eslint src",
@@ -21,6 +21,7 @@
     "build/*"
   ],
   "devDependencies": {
+    "dot-json": "^1.1.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-preact-pure": "^2.0.0",
     "eslint": "^6.0.1",
