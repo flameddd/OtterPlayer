@@ -9,25 +9,9 @@ import Profile from '../routes/about';
 
 let basename = ''
 
-try {
-  console.log('===========')
-  console.log(window)
-  console.log(process)
-  console.log(process.env.GITHUB_PAGES)
-} catch (error) {
-  
+if (process.env.GITHUB_PAGES) {
+  basename = `/${process.env.GITHUB_PAGES}`
 }
-if (
-  typeof window !== "undefined"
-  && typeof process !== 'undefined'
-  && process.env
-  && process.env.GITHUB_PAGES
-) {
-  basename = `/${env.GITHUB_PAGES}`
-}
-
-console.log('basename = ')
-console.log(basename)
 
 export default class App extends Component {
   state = {
