@@ -1,7 +1,7 @@
 {
   "name": "OtterPlayer",
   "short_name": "OtterPlayer",
-  "start_url": "/",
+  "start_url": "/OtterPlayer/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
