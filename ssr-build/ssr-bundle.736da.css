@@ -19,6 +19,9 @@ html, body {
 	height: 100%;
 }
 
+.app__-4egw {
+  overflow: hidden;
+}
 .header__3QGkI {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,10 +67,27 @@ html, body {
 	color: #fff;
 }
 
+.header__3QGkI title {
+  display: inline;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+	margin: 0;
+	padding: 0 15px;
+	font-size: 24px;
+	line-height: 56px;
+	font-weight: 400;
+	color: #FFF;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .header__3QGkI nav {
-	-webkit-box-flex: 1;
-	    -ms-flex-positive: 1;
-	        flex-grow: 1;
+	-webkit-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
 	font-size: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1839,4 +1859,4 @@ video::-webkit-media-text-track-display {
 }
 
 
-/*# sourceMappingURL=ssr-bundle.6a9a6.css.map*/
+/*# sourceMappingURL=ssr-bundle.736da.css.map*/
