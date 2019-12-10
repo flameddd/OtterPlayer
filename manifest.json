@@ -13,12 +13,12 @@
       "sizes": "75x75"
     },
     {
-      "src": "./assets/icons/videojsFavicon.png",
+      "src": "./assets/icons/videojsFavicon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "./assets/icons/videojsFavicon.png",
+      "src": "./assets/icons/videojsFavicon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

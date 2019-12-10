@@ -24,12 +24,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/OtterPlayer/assets/icons/mstile-150x150.png"
   },
   {
+    "revision": "a91e68afe138796cbe001b12c35fa7d5",
+    "url": "/OtterPlayer/assets/icons/videojsFavicon-192x192.png"
+  },
+  {
+    "revision": "5c7023725cc1d0e696f0254765713d22",
+    "url": "/OtterPlayer/assets/icons/videojsFavicon-512x512.png"
+  },
+  {
     "revision": "c395157dc860738eef84bbf993a4168e",
     "url": "/OtterPlayer/assets/icons/videojsFavicon.png"
   },
   {
-    "revision": "88bbdc9b46bcf85dee57",
-    "url": "/OtterPlayer/bundle.88bbd.js"
+    "revision": "a25be6f5d73fe8270f2c2a2a4287274a",
+    "url": "/OtterPlayer/bundle.d9430.esm.js"
   },
   {
     "revision": "88bbdc9b46bcf85dee57",
@@ -40,35 +48,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/OtterPlayer/index.html"
   },
   {
-    "revision": "f2916f1c0a8f1199c034",
-    "url": "/OtterPlayer/polyfills.f2916.js"
+    "revision": "f5cd293541a2e747939fcd169161bedc",
+    "url": "/OtterPlayer/polyfills.efc13.esm.js"
   },
   {
     "revision": "57fec53d680749b4fe7f",
     "url": "/OtterPlayer/route-about.chunk.39129.css"
   },
   {
-    "revision": "57fec53d680749b4fe7f",
-    "url": "/OtterPlayer/route-about.chunk.57fec.js"
+    "revision": "993410e802eedf3e442bbb4403ed64f8",
+    "url": "/OtterPlayer/route-about.chunk.eb728.esm.js"
   },
   {
-    "revision": "4b5d8f791a78ca07918c",
-    "url": "/OtterPlayer/route-home.chunk.4b5d8.js"
+    "revision": "2bd36175f77eb1bcec23df93f42ce9f9",
+    "url": "/OtterPlayer/route-home.chunk.31c4c.esm.js"
   },
   {
     "revision": "4b5d8f791a78ca07918c",
     "url": "/OtterPlayer/route-home.chunk.bda64.css"
-  },
-  {
-    "revision": "13b82ed03d648451c57be206f75f0216",
-    "url": "/OtterPlayer/sw-debug.js"
-  },
-  {
-    "revision": "73f257dbd4367d93c3e047a0a478ea0d",
-    "url": "/OtterPlayer/sw-esm.js"
-  },
-  {
-    "revision": "9a3cb81a74444b1e69ff617c2a5327c9",
-    "url": "/OtterPlayer/sw.js"
   }
 ]);
