@@ -11,6 +11,16 @@
       "src": "./assets/icons/videojsFavicon.png",
       "type": "image/png",
       "sizes": "75x75"
+    },
+    {
+      "src": "./assets/icons/videojsFavicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./assets/icons/videojsFavicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
