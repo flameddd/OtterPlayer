@@ -23,13 +23,13 @@ An video player base on browser
   - open PWA
   - install
   - mobile safari?
-- add github
+- ~~add github~~
   - Lincense Apache-2? MIT?
 - add issue report
 - add i18n ?
-- upload github page!?
-  - others infra? see picture from `statesofjs jsconfjp`
-  - add CD (trigger when merge into master branch)
+- ~~upload github page!?~~
+  - ~~others infra? see picture from `statesofjs jsconfjp`~~
+  - ~~add CD (trigger when merge into master branch)~~
 - add SEO?
 - add LOGO
 - update README
