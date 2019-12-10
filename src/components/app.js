@@ -7,6 +7,17 @@ import Header from './header';
 import Home from '../routes/home';
 import Profile from '../routes/about';
 
+let basename = ''
+
+if (
+  typeof window !== "undefined"
+  && typeof process !== 'undefined'
+  && process.env
+  && process.env.GITHUB_PAGES
+) {
+  basename = `/${env.GITHUB_PAGES}`
+}
+
 export default class App extends Component {
   state = {
     objectURL: '',
@@ -32,7 +43,7 @@ export default class App extends Component {
 			<div id="app">
         <Header name={this.state.name} onInput={this.onInput} />
 				<Router onChange={this.handleRoute}>
-					<Home path="/" {...this.state} />
+          <Home path={`${basename}/`} {...this.state} />
 					<Profile path="/profile/" user="me" />
 					<Profile path="/profile/:user" />
 				</Router>

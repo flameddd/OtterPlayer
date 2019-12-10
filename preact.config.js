@@ -13,8 +13,9 @@ export default {
 	 **/
   webpack(config, env, helpers, options) {
     /** you can change the config here **/
-    config.output.publicPath = !process.env.GITHUB_PAGES
-      ? ''
-      : `/${process.env.GITHUB_PAGES}/`
+    if (process.env.GITHUB_PAGES) {
+      config.output.publicPath = `/${process.env.GITHUB_PAGES}/`;
+      config.plugins[1].definitions['process.env.GITHUB_PAGES'] = process.env.GITHUB_PAGES;
+    }
   },
 };
