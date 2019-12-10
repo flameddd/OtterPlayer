@@ -13,6 +13,8 @@ export default {
 	 **/
   webpack(config, env, helpers, options) {
     /** you can change the config here **/
-    config.output.publicPath = '/OtterPlayer/'
+    config.output.publicPath = !process.env.GITHUB_PAGES
+      ? ''
+      : `/${process.env.GITHUB_PAGES}/`
   },
 };
