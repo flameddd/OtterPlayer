@@ -15,7 +15,11 @@ export default {
     /** you can change the config here **/
     if (process.env.GITHUB_PAGES) {
       config.output.publicPath = `/${process.env.GITHUB_PAGES}/`;
-      config.plugins[1].definitions['process.env.GITHUB_PAGES'] = process.env.GITHUB_PAGES;
+      const { plugin } = helpers.getPluginsByName(config, 'DefinePlugin')[0];
+      Object.assign(
+        plugin.definitions,
+        { ['process.env.GITHUB_PAGES']: process.env.GITHUB_PAGES }
+      );
     }
   },
 };
