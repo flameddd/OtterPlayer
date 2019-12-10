@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
+import style from './style.css';
 import Header from './header';
 
 // Code-splitting is automated for routes
@@ -35,7 +36,7 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div id="app">
+      <div id="app" class={style.app}>
         <Header name={this.state.name} onInput={this.onInput} />
 				<Router onChange={this.handleRoute}>
           <Home path={`${basename}/`} {...this.state} />

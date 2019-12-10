@@ -31,8 +31,23 @@
 	color: #fff;
 }
 
+.header title {
+  display: inline;
+  flex: 1;
+	margin: 0;
+	padding: 0 15px;
+	font-size: 24px;
+	line-height: 56px;
+	font-weight: 400;
+	color: #FFF;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .header nav {
-	flex-grow: 1;
+	flex: none;
 	font-size: 100%;
   display: inline-flex;
   justify-content: flex-end;

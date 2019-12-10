@@ -13,7 +13,7 @@ const Header = ({ name = '', onInput }) => (
       style={{ visibility: 'hidden', width: '0px' }}
       onInput={onInput}
     />
-    <title>{name}</title>
+      <title class={style.title}>{name}</title>
 		<nav>
 			<Link activeClassName={style.active} href="/">Player</Link>
 			<Link activeClassName={style.active} href="/about">about</Link>
