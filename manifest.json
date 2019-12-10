@@ -11,6 +11,6 @@
       "src": "./assets/icons/videojsFavicon.png",
       "type": "image/png",
       "sizes": "75x75"
-    },
-  ],
+    }
+  ]
 }
