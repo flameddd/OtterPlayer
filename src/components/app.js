@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import { Router } from 'preact-router';
 
 import style from './style.css';
@@ -6,7 +6,6 @@ import Header from './header';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
-import Profile from '../routes/about';
 
 let basename = ''
 
@@ -40,8 +39,6 @@ export default class App extends Component {
         <Header name={this.state.name} onInput={this.onInput} />
 				<Router onChange={this.handleRoute}>
           <Home path={`${basename}/`} {...this.state} />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
 				</Router>
 			</div>
 		);

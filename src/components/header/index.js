@@ -1,10 +1,8 @@
-import { h } from 'preact';
-import { Link } from 'preact-router/match';
 import style from './style.css';
 
 const Header = ({ name = '', onInput }) => (
 	<header class={style.header}>
-    <h1>Video.js</h1>
+    <h1>OtterPlayer</h1>
     <label for="files" class="btn">Select video</label>
     <input
       type="file"
@@ -15,8 +13,10 @@ const Header = ({ name = '', onInput }) => (
     />
       <title class={style.title}>{name}</title>
 		<nav>
-			<Link activeClassName={style.active} href="/">Player</Link>
-			<Link activeClassName={style.active} href="/about">about</Link>
+      <a
+        href="https://github.com/flameddd/OtterPlayer"
+        target="_blank"
+      >about</a>
 		</nav>
 	</header>
 );
