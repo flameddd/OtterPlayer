@@ -36,15 +36,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/OtterPlayer/assets/icons/videojsFavicon.png"
   },
   {
-    "revision": "fe5d42c9e22c5e22893ead3dbdad4357",
-    "url": "/OtterPlayer/bundle.1e37d.esm.js"
+    "revision": "1cad4e550aacc208ad15524fa6d6b7e6",
+    "url": "/OtterPlayer/bundle.5341f.esm.js"
   },
   {
-    "revision": "5abe549ac793b1a9c823",
+    "revision": "7e310157e44f58cc83a8",
     "url": "/OtterPlayer/bundle.a1376.css"
   },
   {
-    "revision": "779312f5416c5d2ca03df15f3bae4ca8",
+    "revision": "76525df57d46dad1f89538dd736ade12",
     "url": "/OtterPlayer/index.html"
   },
   {
