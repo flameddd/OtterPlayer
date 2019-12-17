@@ -9,7 +9,7 @@ const Header = ({ name = '', onInput }) => (
       id="files"
       accept="video/*"
       style={{ visibility: 'hidden', width: '0px' }}
-      onInput={onInput}
+      onchange={onInput}
     />
       <title class={style.title}>{name}</title>
 		<nav>
