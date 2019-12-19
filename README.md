@@ -6,7 +6,16 @@
 ![whyOtterPlayer](/assets/imgs/whyOtterPlayer.jpg)  
 ![installable](/assets/imgs/installable.png)  
 
+## shortcuts
+- `K` key = start/pause
+- `L` key = fast-forward 15 seconds
+- `J` key = back-forward 15 seconds
 
+### 20191219
+- add `shortcut`
+  - `K` key = start/pause
+  - `L` key = fast-forward 15 seconds
+  - `J` key = back-forward 15 seconds
 ### 20191211
 - update readme
 
