@@ -36,15 +36,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/OtterPlayer/assets/icons/videojsFavicon.png"
   },
   {
-    "revision": "1cad4e550aacc208ad15524fa6d6b7e6",
-    "url": "/OtterPlayer/bundle.5341f.esm.js"
+    "revision": "47851af4ce98439ab40da9da14b3c001",
+    "url": "/OtterPlayer/bundle.37d62.esm.js"
   },
   {
-    "revision": "7e310157e44f58cc83a8",
+    "revision": "404a5cbda49301a91846",
     "url": "/OtterPlayer/bundle.a1376.css"
   },
   {
-    "revision": "76525df57d46dad1f89538dd736ade12",
+    "revision": "cc106290d206429831744923e72f8a21",
     "url": "/OtterPlayer/index.html"
   },
   {
@@ -52,11 +52,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/OtterPlayer/polyfills.efc13.esm.js"
   },
   {
-    "revision": "7a4dd7df3f5bbccc9680",
-    "url": "/OtterPlayer/route-home.chunk.bda64.css"
+    "revision": "234da13e336921fb08c740f889f0d161",
+    "url": "/OtterPlayer/route-home.chunk.97e56.esm.js"
   },
   {
-    "revision": "956448aff4b683aee34b4d10e8b978cd",
-    "url": "/OtterPlayer/route-home.chunk.c196a.esm.js"
+    "revision": "0bb3573be96e96791842",
+    "url": "/OtterPlayer/route-home.chunk.bda64.css"
   }
 ]);
