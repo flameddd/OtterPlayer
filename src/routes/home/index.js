@@ -21,7 +21,10 @@ const videoJsOptions = {
         }
       }
 
-      // `L` key = fast-forward 15 seconds
+      if (!this.duration()) {
+        return; // No video loaded.
+      }
+      // `l || L` key = fast-forward 15 seconds
       if (event.which === 76) {
         const currentTime = this.currentTime();
         const duration = this.duration();
@@ -33,7 +36,7 @@ const videoJsOptions = {
         }
       }
 
-      // `J` key = back-forward 15 seconds
+      // `j || J` key = back-forward 15 seconds
       if (event.which === 74) {
         const currentTime = this.currentTime();
         if (Math.floor(currentTime) > 15) {
