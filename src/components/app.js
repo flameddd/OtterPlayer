@@ -1,24 +1,24 @@
-import { Component } from 'preact';
-import { Router } from 'preact-router';
+import { Component } from "preact";
+import { Router } from "preact-router";
 
-import style from './style.css';
-import Header from './header';
+import style from "./style.css";
+import Header from "./header";
 
 // Code-splitting is automated for routes
-import Home from '../routes/home';
+import Home from "../routes/home";
 
-let basename = ''
+let basename = "";
 
 if (process.env.GITHUB_PAGES) {
-  basename = `/${process.env.GITHUB_PAGES}`
+  basename = `/${process.env.GITHUB_PAGES}`;
 }
 
 const vidoeKeyUpListener = event => {
-  const { tagName, className } = event.target
+  const { tagName, className } = event.target;
   if (tagName === "VIDEO" && className === "vjs-tech") {
     return;
   }
-  const videoPlayer = document.getElementsByClassName("vjs-tech")[0]
+  const videoPlayer = document.getElementsByClassName("vjs-tech")[0];
 
   if (!videoPlayer.duration) {
     return;
@@ -50,33 +50,32 @@ const vidoeKeyUpListener = event => {
     if (Math.floor(videoPlayer.currentTime) > 15) {
       videoPlayer.currentTime = videoPlayer.currentTime - 15;
     } else {
-      videoPlayer.currentTime = (
-        videoPlayer.currentTime - Math.floor(videoPlayer.currentTime)
-      );
+      videoPlayer.currentTime =
+        videoPlayer.currentTime - Math.floor(videoPlayer.currentTime);
     }
   }
-}
+};
 
 export default class App extends Component {
   state = {
-    objectURL: '',
-    name: '',
-    type: '',
+    objectURL: "",
+    name: "",
+    type: ""
   };
 
   componentDidMount() {
     window.addEventListener("keyup", vidoeKeyUpListener);
 
     const script = document.createElement("script");
-    const script2 = document.createElement('noscript');
-    
+    const script2 = document.createElement("noscript");
+
     script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WG3W59C');`;
     script2.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG3W59C"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
 
     document.head.appendChild(script);
     document.body.appendChild(script2);
@@ -86,28 +85,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`
     window.removeEventListener("keyup", vidoeKeyUpListener);
   }
 
-	/** Gets fired when the route changes.
-	 *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
-	 *	@param {string} event.url	The newly routed URL
-	 */
-	handleRoute = event => {
-		this.currentUrl = event.url;
-	};
+  /** Gets fired when the route changes.
+   *  @param {Object} event    "change" event from [preact-router](http://git.io/preact-router)
+   *  @param {string} event.url  The newly routed URL
+   */
+  handleRoute = event => {
+    this.currentUrl = event.url;
+  };
 
   onInput = event => {
-    const { name, type } = event.target.files[0]
-    const objectURL = URL.createObjectURL(event.target.files[0])
-    this.setState({ objectURL, type, name })
-  }
+    const { name, type } = event.target.files[0];
+    const objectURL = URL.createObjectURL(event.target.files[0]);
+    this.setState({ objectURL, type, name });
+  };
 
-	render() {
-		return (
+  render() {
+    return (
       <div id="app" class={style.app}>
         <Header name={this.state.name} onInput={this.onInput} />
-				<Router onChange={this.handleRoute}>
+        <Router onChange={this.handleRoute}>
           <Home path={`${basename}/`} {...this.state} />
-				</Router>
-			</div>
-		);
-	}
+        </Router>
+      </div>
+    );
+  }
 }

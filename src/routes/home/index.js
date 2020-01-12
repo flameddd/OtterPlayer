@@ -1,7 +1,7 @@
-import { Component } from 'preact';
-import style from './style';
-import videojs from 'video.js'
-import 'video.js/dist/video-js.css'
+import { Component } from "preact";
+import style from "./style";
+import videojs from "video.js";
+import "video.js/dist/video-js.css";
 
 const videoJsOptions = {
   autoplay: true,
@@ -9,10 +9,10 @@ const videoJsOptions = {
   sources: [],
   playbackRates: [0.5, 1, 1.5, 2],
   userActions: {
-    hotkeys: function (event) {
+    hotkeys(event) {
       // `this` is the player in this context
       // `K` key = start/pause
-      
+
       if (event.which === 75) {
         if (this.paused()) {
           this.play();
@@ -47,7 +47,7 @@ const videoJsOptions = {
       }
     }
   }
-}
+};
 
 class Home extends Component {
   componentDidMount() {
@@ -55,7 +55,7 @@ class Home extends Component {
       this.videoNode,
       { ...videoJsOptions },
       function onPlayerReady() {
-        console.log('onPlayerReady', this)
+        console.log("onPlayerReady", this);
       }
     );
   }
@@ -69,24 +69,22 @@ class Home extends Component {
 
   componentWillUnmount() {
     if (this.player) {
-      this.player.dispose()
+      this.player.dispose();
     }
   }
 
   render() {
     return (
       <div class={style.home}>
-        <div
-          data-vjs-player
-          style={{ width: '100%', height: "100%" }}
-        >
+        <div data-vjs-player style={{ width: "100%", height: "100%" }}>
           <video
-            ref={node => this.videoNode = node}
+            ref={node => (this.videoNode = node)}
             className="video-js"
             disablePictureInPicture
           />
         </div>
-      </div>)
+      </div>
+    );
   }
 }
 
