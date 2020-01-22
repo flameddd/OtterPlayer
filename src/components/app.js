@@ -57,12 +57,12 @@ const vidoeKeyUpListener = event => {
 
   // up arrow key = higher volume
   if (event.which === 38 && videoPlayer.volume < 1) {
-    videoPlayer.volume = ((videoPlayer.volume * 10) + 1) / 10;
+    videoPlayer.volume = (videoPlayer.volume * 10 + 1) / 10;
   }
 
   // down arrow key = lower volume
   if (event.which === 40 && videoPlayer.volume > 0) {
-    videoPlayer.volume = ((videoPlayer.volume * 10) - 1) / 10;
+    videoPlayer.volume = (videoPlayer.volume * 10 - 1) / 10;
   }
 };
 
@@ -70,7 +70,8 @@ export default class App extends Component {
   state = {
     objectURL: "",
     name: "",
-    type: ""
+    type: "",
+    subtitles: ""
   };
 
   componentDidMount() {
@@ -109,10 +110,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
     this.setState({ objectURL, type, name });
   };
 
+  onInputSubTitle = event => {
+    this.setState({ subtitles: URL.createObjectURL(event.target.files[0]) });
+  };
+
   render() {
     return (
       <div id="app" class={style.app}>
-        <Header name={this.state.name} onInput={this.onInput} />
+        <Header
+          name={this.state.name}
+          onInput={this.onInput}
+          onInputSubTitle={this.onInputSubTitle}
+        />
         <Router onChange={this.handleRoute}>
           <Home path={`${basename}/`} {...this.state} />
         </Router>

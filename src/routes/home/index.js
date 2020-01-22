@@ -11,7 +11,7 @@ const videoJsOptions = {
   userActions: {
     hotkeys(event) {
       // `this` is the player in this context
-      
+
       // `k || K || space` key = start/pause
       if (event.which === 75 || event.which === 32) {
         if (this.paused()) {
@@ -48,12 +48,12 @@ const videoJsOptions = {
 
       // up arrow key = higher volume
       if (event.which === 38 && this.volume() < 1) {
-        this.volume(((this.volume() * 10) + 1) / 10);
+        this.volume((this.volume() * 10 + 1) / 10);
       }
 
       // down arrow key = lower volume
       if (event.which === 40 && this.volume() > 0) {
-        this.volume(((this.volume() * 10) - 1) / 10);
+        this.volume((this.volume() * 10 - 1) / 10);
       }
     }
   }
@@ -91,7 +91,11 @@ class Home extends Component {
             ref={node => (this.videoNode = node)}
             className="video-js"
             disablePictureInPicture
-          />
+          >
+            {this.props.subtitles && (
+              <track kind="subtitles" src={this.props.subtitles} default />
+            )}
+          </video>
         </div>
       </div>
     );

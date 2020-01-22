@@ -1,17 +1,27 @@
 import style from "./style.css";
 
-const Header = ({ name = "", onInput }) => (
+const Header = ({ name = "", onInput, onInputSubTitle }) => (
   <header class={style.header}>
     <h1>OtterPlayer</h1>
-    <label for="files" class="btn">
+    <label for="video" class="btn">
       Select video
     </label>
     <input
       type="file"
-      id="files"
+      id="video"
       accept="video/*"
       style={{ visibility: "hidden", width: "0px" }}
       onchange={onInput}
+    />
+    <label for="subTitle" class="btn">
+      subtitle
+    </label>
+    <input
+      type="file"
+      id="subTitle"
+      accept=".vtt,.srt"
+      style={{ visibility: "hidden", width: "0px" }}
+      onchange={onInputSubTitle}
     />
     <title class={style.title}>{name}</title>
     <nav>

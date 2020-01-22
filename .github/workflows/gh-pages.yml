@@ -45,10 +45,3 @@ jobs:
           urls: |
             https://flameddd.github.io/OtterPlayer
           temporaryPublicStorage: true
-        env:
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-      - name: Save results
-        uses: actions/upload-artifact@v1
-        with:
-          name: lighthouse-results
-          path: '.lighthouseci' # This will save the Lighthouse results as .json files
