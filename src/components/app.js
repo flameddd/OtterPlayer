@@ -24,8 +24,8 @@ const vidoeKeyUpListener = event => {
     return;
   }
 
-  // `k || K` key = start/pause
-  if (event.which === 75) {
+  // `k || K || space` key = start/pause
+  if (event.which === 75 || event.which === 32) {
     if (videoPlayer.paused) {
       videoPlayer.play();
     } else {
@@ -33,8 +33,8 @@ const vidoeKeyUpListener = event => {
     }
   }
 
-  // `l || L` key = fast-forward 15 seconds
-  if (event.which === 76) {
+  // `l || L || right arrow` key = fast-forward 15 seconds
+  if (event.which === 76 || event.which === 39) {
     const lastDuration = Math.floor(
       videoPlayer.duration - videoPlayer.currentTime
     );
@@ -45,14 +45,24 @@ const vidoeKeyUpListener = event => {
     }
   }
 
-  // `j || J` key = back-forward 15 seconds
-  if (event.which === 74) {
+  // `j || J || left arrow` key = back-forward 15 seconds
+  if (event.which === 74 || event.which === 37) {
     if (Math.floor(videoPlayer.currentTime) > 15) {
       videoPlayer.currentTime = videoPlayer.currentTime - 15;
     } else {
       videoPlayer.currentTime =
         videoPlayer.currentTime - Math.floor(videoPlayer.currentTime);
     }
+  }
+
+  // up arrow key = higher volume
+  if (event.which === 38 && videoPlayer.volume < 1) {
+    videoPlayer.volume = ((videoPlayer.volume * 10) + 1) / 10;
+  }
+
+  // down arrow key = lower volume
+  if (event.which === 40 && videoPlayer.volume > 0) {
+    videoPlayer.volume = ((videoPlayer.volume * 10) - 1) / 10;
   }
 };
 

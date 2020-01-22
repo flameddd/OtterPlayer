@@ -11,9 +11,9 @@ const videoJsOptions = {
   userActions: {
     hotkeys(event) {
       // `this` is the player in this context
-      // `K` key = start/pause
-
-      if (event.which === 75) {
+      
+      // `k || K || space` key = start/pause
+      if (event.which === 75 || event.which === 32) {
         if (this.paused()) {
           this.play();
         } else {
@@ -24,8 +24,8 @@ const videoJsOptions = {
       if (!this.duration()) {
         return; // No video loaded.
       }
-      // `l || L` key = fast-forward 15 seconds
-      if (event.which === 76) {
+      // `l || L || right arrow` key = fast-forward 15 seconds
+      if (event.which === 76 || event.which === 39) {
         const currentTime = this.currentTime();
         const duration = this.duration();
         const lastDuration = Math.floor(duration - currentTime);
@@ -36,14 +36,24 @@ const videoJsOptions = {
         }
       }
 
-      // `j || J` key = back-forward 15 seconds
-      if (event.which === 74) {
+      // `j || J || left arrow` key = back-forward 15 seconds
+      if (event.which === 74 || event.which === 37) {
         const currentTime = this.currentTime();
         if (Math.floor(currentTime) > 15) {
           this.currentTime(currentTime - 15);
         } else {
           this.currentTime(currentTime - Math.floor(currentTime));
         }
+      }
+
+      // up arrow key = higher volume
+      if (event.which === 38 && this.volume() < 1) {
+        this.volume(((this.volume() * 10) + 1) / 10);
+      }
+
+      // down arrow key = lower volume
+      if (event.which === 40 && this.volume() > 0) {
+        this.volume(((this.volume() * 10) - 1) / 10);
       }
     }
   }

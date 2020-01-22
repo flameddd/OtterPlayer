@@ -7,9 +7,11 @@
 ![installable](/assets/imgs/installable.png)  
 
 ## shortcuts
-- `K` key = start/pause
-- `L` key = fast-forward 15 seconds
-- `J` key = back-forward 15 seconds
+- `K || Space` key = start/pause
+- `L || Right Arrow` key = fast-forward 15 seconds
+- `J || Left Arrow` key = back-forward 15 seconds
+- `Up Arrow` key = higher volume
+- `Down Arrow` key = lower volume
 
 ### 20191219
 - add `shortcut`

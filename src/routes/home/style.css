@@ -2,3 +2,7 @@
   height: calc(100vh - 56px);
   width: 100%;
 }
+
+.home video {
+  outline: 0;
+}
