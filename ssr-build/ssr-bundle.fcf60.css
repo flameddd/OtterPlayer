@@ -60,7 +60,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
+  margin: 0 4px;
   padding: 0 10px;
   font-size: 20px;
   font-weight: 400;
@@ -1857,4 +1857,4 @@ video::-webkit-media-text-track-display {
 }
 
 
-/*# sourceMappingURL=ssr-bundle.e5931.css.map*/
+/*# sourceMappingURL=ssr-bundle.fcf60.css.map*/
