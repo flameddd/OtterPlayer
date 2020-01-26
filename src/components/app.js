@@ -66,12 +66,19 @@ const vidoeKeyUpListener = event => {
   }
 };
 
+const setSubtitles = subtitle => {
+  document.getElementById("subtitles").src = subtitle;
+};
+
+const removeSubtitles = subtitle => {
+  document.getElementById("subtitles").src = "";
+};
+
 export default class App extends Component {
   state = {
     objectURL: "",
     name: "",
-    type: "",
-    subtitles: ""
+    type: ""
   };
 
   componentDidMount() {
@@ -108,10 +115,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
     const { name, type } = event.target.files[0];
     const objectURL = URL.createObjectURL(event.target.files[0]);
     this.setState({ objectURL, type, name });
+    removeSubtitles();
   };
 
   onInputSubTitle = event => {
-    this.setState({ subtitles: URL.createObjectURL(event.target.files[0]) });
+    setSubtitles(URL.createObjectURL(event.target.files[0]));
   };
 
   render() {

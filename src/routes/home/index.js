@@ -92,9 +92,7 @@ class Home extends Component {
             className="video-js"
             disablePictureInPicture
           >
-            {this.props.subtitles && (
-              <track kind="subtitles" src={this.props.subtitles} default />
-            )}
+            <track kind="subtitles" id="subtitles" default />
           </video>
         </div>
       </div>
