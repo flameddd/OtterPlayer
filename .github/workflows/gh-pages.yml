@@ -27,13 +27,6 @@ jobs:
     - run: npm ci
 
     - run: npm run build:gh
-
-    - uses: actions/checkout@v1
-    - name: Run Lighthouse against a static dist dir
-      uses: treosh/lighthouse-ci-action@v2
-      with:
-        configPath: './lighthouserc.json'
-        temporaryPublicStorage: true
  
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
@@ -41,3 +34,9 @@ jobs:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./build
+
+    - name: Run Lighthouse against a static dist dir
+      uses: treosh/lighthouse-ci-action@v2
+      with:
+        configPath: './lighthouserc.json'
+        temporaryPublicStorage: true
