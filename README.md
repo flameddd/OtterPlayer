@@ -13,6 +13,9 @@
 - `Up Arrow` key = higher volume
 - `Down Arrow` key = lower volume
 
+### 20200205
+add text for re-trigger `Actions`, cuz there are no re-try feature...
+
 ### 20191219
 - add `shortcut`
   - `K` key = start/pause
