@@ -42,6 +42,5 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
-          urls: |
-            https://flameddd.github.io/OtterPlayer
+          configPath: './lighthouserc.json'
           temporaryPublicStorage: true
