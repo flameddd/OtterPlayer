@@ -9,7 +9,7 @@ const Header = ({ name = "", onInput, onInputSubTitle }) => (
     <input
       type="file"
       id="video"
-      accept="video/*"
+      accept="video/mp4,video/x-m4v,video/*"
       style={{ visibility: "hidden", width: "0px" }}
       onchange={onInput}
     />
