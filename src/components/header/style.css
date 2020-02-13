@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  height: 56px;
+  height: 36px;
   padding: 0;
   background: #673AB7;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0 15px;
   font-size: 24px;
-  line-height: 56px;
+  line-height: 36px;
   font-weight: 400;
   color: #FFF;
 }
@@ -20,7 +20,7 @@
 .header label {
   flex: none;
   border: 2px solid #3cf73c;
-  border-radius: 15px;
+  border-radius: 8px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@
   margin: 0;
   padding: 0 15px;
   font-size: 24px;
-  line-height: 56px;
+  line-height: 36px;
   font-weight: 400;
   color: #FFF;
   min-width: 0;
@@ -55,8 +55,8 @@
 
 .header nav a {
   display: inline-block;
-  height: 56px;
-  line-height: 56px;
+  height: 36px;
+  line-height: 36px;
   padding: 0 15px;
   min-width: 50px;
   text-align: center;
