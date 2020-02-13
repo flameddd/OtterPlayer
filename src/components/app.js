@@ -4,7 +4,7 @@ import { Router } from "preact-router";
 import style from "./style.css";
 import Header from "./header";
 
-import manifest from "../manifest.json"
+import manifest from "../manifest.json";
 
 // Code-splitting is automated for routes
 import Home from "../routes/home";
@@ -101,12 +101,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
     document.body.appendChild(script2);
 
     const link = document.createElement("link");
-    link.rel="apple-touch-icon";
-    link.sizes="75x75";
-    link.href=manifest.icons[0].src;
+    link.rel = "apple-touch-icon";
+    link.sizes = "75x75";
+    link.href = manifest.icons[0].src;
     document.head.appendChild(link);
-
-}
+  }
 
   componentWillUnmount() {
     window.removeEventListener("keyup", vidoeKeyUpListener);
