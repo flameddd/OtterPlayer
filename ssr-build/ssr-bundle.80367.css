@@ -26,7 +26,7 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 56px;
+  height: 36px;
   padding: 0;
   background: #673AB7;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -40,7 +40,7 @@ html, body {
   margin: 0;
   padding: 0 15px;
   font-size: 24px;
-  line-height: 56px;
+  line-height: 36px;
   font-weight: 400;
   color: #FFF;
 }
@@ -50,7 +50,7 @@ html, body {
       -ms-flex: none;
           flex: none;
   border: 2px solid #3cf73c;
-  border-radius: 15px;
+  border-radius: 8px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -75,7 +75,7 @@ html, body {
   margin: 0;
   padding: 0 15px;
   font-size: 24px;
-  line-height: 56px;
+  line-height: 36px;
   font-weight: 400;
   color: #FFF;
   min-width: 0;
@@ -99,8 +99,8 @@ html, body {
 
 .header__3QGkI nav a {
   display: inline-block;
-  height: 56px;
-  line-height: 56px;
+  height: 36px;
+  line-height: 36px;
   padding: 0 15px;
   min-width: 50px;
   text-align: center;
@@ -120,12 +120,20 @@ html, body {
 }
 
 .home__MseGd {
-  height: calc(100vh - 56px);
+  height: calc(100vh - 36px);
   width: 100%;
 }
 
 .home__MseGd video {
   outline: 0;
+}
+
+.home__MseGd button[title="Picture-in-Picture"] {
+  display: none;
+}
+
+.home__MseGd button[title="Captions"] {
+  display: none;
 }
 
 @charset "UTF-8";
@@ -1857,4 +1865,4 @@ video::-webkit-media-text-track-display {
 }
 
 
-/*# sourceMappingURL=ssr-bundle.fcf60.css.map*/
+/*# sourceMappingURL=ssr-bundle.80367.css.map*/
