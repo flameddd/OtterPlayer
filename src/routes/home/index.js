@@ -61,6 +61,7 @@ const videoJsOptions = {
 
 class Home extends Component {
   componentDidMount() {
+    this.updateVideCursor = this.updateVideCursor.bind(this);
     this.player = videojs(
       this.videoNode,
       { ...videoJsOptions },
@@ -68,6 +69,9 @@ class Home extends Component {
         console.log("onPlayerReady", this);
       }
     );
+
+    this.videoNode.addEventListener("pause", this.updateVideCursor);
+    this.videoNode.addEventListener("playing", this.updateVideCursor);
   }
 
   componentDidUpdate() {
@@ -80,6 +84,22 @@ class Home extends Component {
   componentWillUnmount() {
     if (this.player) {
       this.player.dispose();
+    }
+  }
+
+  updateVideCursor() {
+    if (!this.videoNode) {
+      return;
+    }
+
+    if (this.videoNode.paused) {
+      this.videoNode.style.cursor = "auto";
+    } else {
+      setTimeout(() => {
+        if (!this.videoNode.paused) {
+          this.videoNode.style.cursor = "none";
+        }
+      }, 3000);
     }
   }
 
