@@ -13,6 +13,10 @@
 - `Up Arrow` key = higher volume
 - `Down Arrow` key = lower volume
 
+### 20200516
+- add cursor styling logic
+  - hide cursor on `<video />` tag aften 3 seconds later when video start playing for better usability.
+
 ### 20200205
 add text for re-trigger `Actions`, cuz there are no re-try feature...
 
@@ -78,7 +82,7 @@ npm run build
 # test the production build locally
 npm run serve
 
-# run tests with jest and preact-render-spy 
+# run tests with jest and preact-render-spy
 npm run test
 ```
 
