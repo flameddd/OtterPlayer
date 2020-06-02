@@ -95,6 +95,7 @@ class Home extends Component {
     if (this.videoNode.paused) {
       this.videoNode.style.cursor = "auto";
     } else {
+      // hide cursor when video playing, for better user exp.
       setTimeout(() => {
         if (!this.videoNode.paused) {
           this.videoNode.style.cursor = "none";
