@@ -1,3 +1,9 @@
 .app {
+  display: flex;
+  flex-flow: column;
   overflow: hidden;
+}
+
+.content {
+  flex: 1;
 }

@@ -1,10 +1,13 @@
 .header {
-  display: flex;
-  height: 36px;
-  padding: 0;
   background: #673AB7;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 50;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 36px;
+  overflow: hidden;
+  padding: 0;
+  transition: flex-basis 0.3s;
 }
 
 .header h1 {
@@ -49,6 +52,7 @@
 .header nav {
   flex: none;
   font-size: 100%;
+  font-weight: bold;
   display: inline-flex;
   justify-content: flex-end;
 }

@@ -72,8 +72,10 @@ const setSubtitles = subtitle => {
   document.getElementById("subtitles").src = subtitle;
 };
 
-const removeSubtitles = subtitle => {
-  document.getElementById("subtitles").src = "";
+const removeSubtitles = () => {
+  if (document.getElementById("subtitles")) {
+    document.getElementById("subtitles").src = "";
+  }
 };
 
 export default class App extends Component {
@@ -82,6 +84,31 @@ export default class App extends Component {
     name: "",
     type: ""
   };
+
+  headerRef = null;
+  contentRef = null;
+  mutationCallBack = mutations => {
+    const mutatedClassName = mutations[mutations.length - 1].target.className;
+    if (
+      mutatedClassName.indexOf("vjs-playing") !== -1 &&
+      mutatedClassName.indexOf("vjs-user-inactive") !== -1
+    ) {
+      // hide Header, cursor when video playing and user-inactive
+      this.headerRef.base.style["flex-basis"] = "0px";
+      this.contentRef.style.cursor = "none";
+    } else if (this.headerRef.base.style["flex-basis"] !== "36px") {
+      // element "#vjs_video_3" change className very often
+      // set flex-basis only when <Header /> not show up
+      // so, 「if !== "36px" 」 is for avoid unnecessary set value
+      this.headerRef.base.style["flex-basis"] = "36px";
+      this.contentRef.style.cursor = "auto";
+    }
+  };
+
+  observer =
+    typeof window !== "undefined"
+      ? new MutationObserver(this.mutationCallBack)
+      : undefined;
 
   componentDidMount() {
     window.addEventListener("keyup", vidoeKeyUpListener);
@@ -95,6 +122,9 @@ export default class App extends Component {
 
   componentWillUnmount() {
     window.removeEventListener("keyup", vidoeKeyUpListener);
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 
   /** Gets fired when the route changes.
@@ -106,10 +136,12 @@ export default class App extends Component {
   };
 
   onInput = event => {
-    const { name, type } = event.target.files[0];
-    const objectURL = URL.createObjectURL(event.target.files[0]);
-    this.setState({ objectURL, type, name });
-    removeSubtitles();
+    if (event.target.files[0]) {
+      const { name, type } = event.target.files[0];
+      const objectURL = URL.createObjectURL(event.target.files[0]);
+      this.setState({ objectURL, type, name });
+      removeSubtitles();
+    }
   };
 
   onInputSubTitle = event => {
@@ -120,13 +152,20 @@ export default class App extends Component {
     return (
       <div id="app" class={style.app}>
         <Header
+          ref={ref => (this.headerRef = ref)}
           name={this.state.name}
           onInput={this.onInput}
           onInputSubTitle={this.onInputSubTitle}
         />
-        <Router onChange={this.handleRoute}>
-          <Home path={`${basename}/`} {...this.state} />
-        </Router>
+        <div class={style.content} ref={ref => (this.contentRef = ref)}>
+          <Router onChange={this.handleRoute}>
+            <Home
+              path={`${basename}/`}
+              {...this.state}
+              observer={this.observer}
+            />
+          </Router>
+        </div>
       </div>
     );
   }

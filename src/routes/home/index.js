@@ -60,18 +60,23 @@ const videoJsOptions = {
 };
 
 class Home extends Component {
+  videoRef = null;
+
   componentDidMount() {
-    this.updateVideCursor = this.updateVideCursor.bind(this);
     this.player = videojs(
-      this.videoNode,
+      this.videoRef,
       { ...videoJsOptions },
       function onPlayerReady() {
         console.log("onPlayerReady", this);
       }
     );
 
-    this.videoNode.addEventListener("pause", this.updateVideCursor);
-    this.videoNode.addEventListener("playing", this.updateVideCursor);
+    if (this.props.observer) {
+      this.props.observer.observe(document.querySelector("#vjs_video_3"), {
+        attributes: true,
+        attributeFilter: ["class"]
+      });
+    }
   }
 
   componentDidUpdate() {
@@ -87,35 +92,20 @@ class Home extends Component {
     }
   }
 
-  updateVideCursor() {
-    if (!this.videoNode) {
-      return;
-    }
-
-    if (this.videoNode.paused) {
-      this.videoNode.style.cursor = "auto";
-    } else {
-      // hide cursor when video playing, for better user exp.
-      setTimeout(() => {
-        if (!this.videoNode.paused) {
-          this.videoNode.style.cursor = "none";
-        }
-      }, 3000);
-    }
-  }
-
   render() {
     return (
-      <div class={style.home}>
-        <div data-vjs-player style={{ width: "100%", height: "100%" }}>
-          <video
-            ref={node => (this.videoNode = node)}
-            className="video-js"
-            disablePictureInPicture
-          >
-            <track kind="subtitles" id="subtitles" default />
-          </video>
-        </div>
+      <div
+        data-vjs-player
+        class={style}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <video
+          ref={ref => (this.videoRef = ref)}
+          className="video-js"
+          disablePictureInPicture
+        >
+          <track kind="subtitles" id="subtitles" default />
+        </video>
       </div>
     );
   }

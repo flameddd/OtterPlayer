@@ -1,16 +1,8 @@
-.home {
-  height: calc(100vh - 36px);
-  width: 100%;
-}
-
-.home video {
+video {
   outline: 0;
 }
 
-.home button[title="Picture-in-Picture"] {
-  display: none;
-}
-
-.home button[title="Captions"] {
+div button[title="Picture-in-Picture"],
+div button[title="Captions"] {
   display: none;
 }

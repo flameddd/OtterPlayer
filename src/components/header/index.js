@@ -1,7 +1,7 @@
 import style from "./style.css";
 
-const Header = ({ name = "", onInput, onInputSubTitle }) => (
-  <header class={style.header}>
+const Header = ({ name = "", onInput, onInputSubTitle, ...props }) => (
+  <header class={style.header} {...props}>
     <h1>OtterPlayer</h1>
     <label for="video" class="btn">
       Select video
@@ -30,7 +30,7 @@ const Header = ({ name = "", onInput, onInputSubTitle }) => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        about
+        Github
       </a>
     </nav>
   </header>

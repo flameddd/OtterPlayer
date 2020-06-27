@@ -13,6 +13,12 @@
 - `Up Arrow` key = higher volume
 - `Down Arrow` key = lower volume
 
+### 20200627
+- set App layout as flexbox
+- add UI logic
+  - hide Header and cursor when `videojs` in `vjs-playing` and `vjs-user-inactive` status
+- fix few bugs, rename better variable name
+
 ### 20200516
 - add cursor styling logic
   - hide cursor on `<video />` tag aften 3 seconds later when video start playing for better usability.
