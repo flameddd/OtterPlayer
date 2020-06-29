@@ -22,7 +22,7 @@ const vidoeKeyUpListener = event => {
   }
   const videoPlayer = document.getElementsByClassName("vjs-tech")[0];
 
-  if (!videoPlayer.duration) {
+  if (!videoPlayer || !videoPlayer.duration) {
     return;
   }
 
