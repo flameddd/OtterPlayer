@@ -1,10 +1,17 @@
-# What is, Why OtterPlayer ？
-  **OtterPlayer** is a local file video player, Web App (PWA) power by [video.js](https://github.com/videojs/video.js) and [preactjs](https://github.com/preactjs/preact). OtterPlayer working `offline` and `installable (chrome)`.  
+# OtterPlayer
+![installable](/assets/imgs/installable.jpg)
 
-  Why? As a **MacBook** user, I heavily relay on **finger zoom in** feature when watch tech video. It's  annoying me than macOS video player App can not **finger zoom in**, So I creat **OtterPlayer** for myself.
+# What is OtterPlayer ？
+- **OtterPlayer** is an web base video player for local video file
+- `Offline supported`
+- `PWA Installable (chrome)`.
 
-![whyOtterPlayer](/assets/imgs/whyOtterPlayer.jpg)  
-![installable](/assets/imgs/installable.png)  
+# Why OtterPlayer 
+  Why? As a **MacBook** user, I heavily relay on **finger zoom in** feature when watch tech video. It's annoying me that any macOS video player App can not **finger zoom in**, So I creat **OtterPlayer** for myself.
+
+<p align="center">
+  <img width="600" height="450" src="assets/imgs/whyOtterPlayer.jpg">
+</p>
 
 ## shortcuts
 - `K || Space` key = start/pause
