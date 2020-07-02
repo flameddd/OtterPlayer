@@ -2,15 +2,16 @@
 ![installable](/assets/imgs/installable.jpg)
 
 # What is OtterPlayer ？
-- **OtterPlayer** is an web base video player for local video file
+- **OtterPlayer** is an web base video player for **local video file**
 - `Offline supported`
 - `PWA Installable (chrome)`.
 
 # Why OtterPlayer 
-  Why? As a **MacBook** user, I heavily relay on **finger zoom in** feature when watch tech video. It's annoying me that any macOS video player App can not **finger zoom in**, So I creat **OtterPlayer** for myself.
+  Why? As a **MacBook** user, I heavily relay on **finger zoom in** feature when watch tech video. It's annoying me that any macOS video player App can not **finger zoom in**, So I creat **OtterPlayer** for myself to watch local file.
 
 <p align="center">
-  <img width="600" height="450" src="assets/imgs/whyOtterPlayer.jpg">
+  <img width="45%" height="450" src="assets/imgs/whyOtterPlayer.jpg">
+  <img width="45%" height="450" src="assets/imgs/zoomin.gif">
 </p>
 
 ## shortcuts
