@@ -70,25 +70,29 @@ html, body {
 }
 
 .header__3QGkI label {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  border: 2px solid #3cf73c;
-  border-radius: 8px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 2px solid #f2b9ff;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  font-size: 20px;
   margin: 0 4px;
   padding: 0 10px;
-  font-size: 20px;
-  font-weight: 400;
-  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__3QGkI label:hover {
+  background-color: #c68fff;
 }
 
 .header__3QGkI title {
@@ -1882,4 +1886,4 @@ video::-webkit-media-text-track-display {
 }
 
 
-/*# sourceMappingURL=ssr-bundle.3d410.css.map*/
+/*# sourceMappingURL=ssr-bundle.aa371.css.map*/

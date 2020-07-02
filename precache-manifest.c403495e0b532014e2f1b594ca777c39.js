@@ -36,15 +36,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/OtterPlayer/assets/icons/videojsFavicon.png"
   },
   {
-    "revision": "24970c37c8a5bd84c83e",
-    "url": "/OtterPlayer/bundle.24970.js"
+    "revision": "9c4fd8da838d47ef67ae",
+    "url": "/OtterPlayer/bundle.4ffee.css"
   },
   {
-    "revision": "24970c37c8a5bd84c83e",
-    "url": "/OtterPlayer/bundle.a82f7.css"
+    "revision": "9c4fd8da838d47ef67ae",
+    "url": "/OtterPlayer/bundle.9c4fd.js"
   },
   {
-    "revision": "56b1a75c6429127443087db6619fc4ee",
+    "revision": "b2c5914a7d08eaa8d4b610ff7e676d7e",
     "url": "/OtterPlayer/index.html"
   },
   {
@@ -64,7 +64,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/OtterPlayer/sw-debug.js"
   },
   {
-    "revision": "de4d5333d1752850c5b9db97d0921b30",
+    "revision": "96e7b504520c81a647d721cc54686d19",
     "url": "/OtterPlayer/sw-esm.js"
   },
   {
