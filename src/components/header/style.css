@@ -21,17 +21,21 @@
 }
 
 .header label {
-  flex: none;
-  border: 2px solid #3cf73c;
-  border-radius: 8px;
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
+  border: 2px solid #f2b9ff;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex: none;
+  font-size: 20px;
   margin: 0 4px;
   padding: 0 10px;
-  font-size: 20px;
-  font-weight: 400;
-  color: #fff;
+  justify-content: center;
+}
+
+.header label:hover {
+  background-color: #c68fff;
 }
 
 .header title {

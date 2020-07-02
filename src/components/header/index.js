@@ -4,7 +4,7 @@ const Header = ({ name = "", onInput, onInputSubTitle, ...props }) => (
   <header class={style.header} {...props}>
     <h1>OtterPlayer</h1>
     <label for="video" class="btn">
-      Select video
+      <b>S</b>elect Video
     </label>
     <input
       type="file"
@@ -14,7 +14,7 @@ const Header = ({ name = "", onInput, onInputSubTitle, ...props }) => (
       onchange={onInput}
     />
     <label for="subTitle" class="btn">
-      subtitle
+      <b>S</b>ubtitle
     </label>
     <input
       type="file"
