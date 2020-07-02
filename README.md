@@ -10,8 +10,8 @@
   Why? As a **MacBook** user, I heavily relay on **finger zoom in** feature when watch tech video. It's annoying me that any macOS video player App can not **finger zoom in**, So I creat **OtterPlayer** for myself to watch local file.
 
 <p align="center">
-  <img width="45%" height="450" src="assets/imgs/whyOtterPlayer.jpg">
-  <img width="45%" height="450" src="assets/imgs/zoomin.gif">
+  <img width="auto" height="450" src="assets/imgs/whyOtterPlayer.jpg">
+  <img width="auto" height="450" src="assets/imgs/zoomin.gif">
 </p>
 
 ## shortcuts
