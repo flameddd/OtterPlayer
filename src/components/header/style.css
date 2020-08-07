@@ -32,6 +32,7 @@
   margin: 0 4px;
   padding: 0 10px;
   justify-content: center;
+  user-select: none;
 }
 
 .header label:hover {
@@ -71,6 +72,7 @@
   background: rgba(255,255,255,0);
   text-decoration: none;
   color: #FFF;
+  user-select: none;
   will-change: background-color;
 }
 
