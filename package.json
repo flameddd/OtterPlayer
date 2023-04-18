@@ -36,7 +36,7 @@
     "preact-cli": "^3.4.5",
     "preact-render-spy": "^1.2.1",
     "prettier": "^1.19.1",
-    "serve": "^11.3.2"
+    "serve": "^14.2.0"
   },
   "dependencies": {
     "preact": "^10.0.1",
