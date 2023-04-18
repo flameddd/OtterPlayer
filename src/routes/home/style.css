@@ -6,3 +6,8 @@ div button[title="Picture-in-Picture"],
 div button[title="Captions"] {
   display: none;
 }
+
+/* style video js play-button-placeholder, since Header are abs postion */
+div button[class*="vjs-big-play-button"] {
+  top: 46px!important;
+}

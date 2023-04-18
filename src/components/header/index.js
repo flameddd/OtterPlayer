@@ -2,7 +2,6 @@ import style from "./style.css";
 
 const Header = ({ name = "", onInput, onInputSubTitle, ...props }) => (
   <header class={style.header} {...props}>
-    <h1>OtterPlayer</h1>
     <label for="video" class="btn">
       <b>S</b>elect Video
     </label>
@@ -23,7 +22,20 @@ const Header = ({ name = "", onInput, onInputSubTitle, ...props }) => (
       style={{ visibility: "hidden", width: "0px" }}
       onchange={onInputSubTitle}
     />
-    <title class={style.title}>{name}</title>
+    {name ? (
+      <title
+        class={style.title}
+        title="Copy video title"
+        onClick={() => {
+          // ONLY work on HTTPS
+          navigator.clipboard.writeText(name);
+        }}
+      >
+        {name}
+      </title>
+    ) : (
+      <title class={style.title} style="cursor:auto;" />
+    )}
     <nav>
       <a
         href="https://github.com/flameddd/OtterPlayer"

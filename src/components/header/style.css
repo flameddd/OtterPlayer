@@ -2,12 +2,17 @@
   background: #673AB7;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 36px;
   overflow: hidden;
   padding: 0;
-  transition: flex-basis 0.3s;
+  padding-left: 15px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transform: translateY(0px);
+  transition: transform 0.2s;
 }
 
 .header h1 {
@@ -52,6 +57,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .header nav {

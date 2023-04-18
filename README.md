@@ -21,6 +21,8 @@
 - `Up Arrow` key = higher volume
 - `Down Arrow` key = lower volume
 
+### 20230418
+- Modify Header hide/show css style for UX
 ### 20200627
 - set App layout as flexbox
 - add UI logic

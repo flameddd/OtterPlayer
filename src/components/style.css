@@ -2,6 +2,9 @@
   display: flex;
   flex-flow: column;
   overflow: hidden;
+
+  /* for Header */
+  position: relative; 
 }
 
 .content {

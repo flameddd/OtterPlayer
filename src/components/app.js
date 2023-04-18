@@ -94,13 +94,15 @@ export default class App extends Component {
       mutatedClassName.indexOf("vjs-user-inactive") !== -1
     ) {
       // hide Header, cursor when video playing and user-inactive
-      this.headerRef.base.style["flex-basis"] = "0px";
+      this.headerRef.base.style.transform = "matrix(1, 0, 0, 1, 0, -36)";
       this.contentRef.style.cursor = "none";
-    } else if (this.headerRef.base.style["flex-basis"] !== "36px") {
+    } else if (
+      this.headerRef.base.style.transform === "matrix(1, 0, 0, 1, 0, -36)"
+    ) {
       // element "#vjs_video_3" change className very often
-      // set flex-basis only when <Header /> not show up
-      // so, 「if !== "36px" 」 is for avoid unnecessary set value
-      this.headerRef.base.style["flex-basis"] = "36px";
+      // set transform only when <Header /> not show up
+      // so, 「if === "matrix(1, 0, 0, 1, 0, -36)" 」 is for avoid unnecessary set value
+      this.headerRef.base.style.transform = "matrix(1, 0, 0, 1, 0, 0)";
       this.contentRef.style.cursor = "auto";
     }
   };

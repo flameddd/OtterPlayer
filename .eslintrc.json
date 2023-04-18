@@ -9,6 +9,7 @@
     "prettier/prettier": "error",
     "indent": ["error", 2],
     "react/jsx-indent-props": [2, 2],
-    "react/sort-comp": "off"
+    "react/sort-comp": "off",
+    "react/jsx-no-bind": "warn"
   }
 }
